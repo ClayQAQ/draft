@@ -13,10 +13,12 @@ class LoginInputView: UIView {
     let rightName: String
     let leftLabel: UILabel = UILabel()
     let rightField: UITextField = UITextField()
+    var isSecret: Bool = false
 
-    init(_ leftName: String, _ rightName: String) {
+    init(_ leftName: String, _ rightName: String, _ isSecret: Bool = false) {
         self.leftName = leftName
         self.rightName = rightName
+        self.isSecret = isSecret
         super.init(frame: .zero)
         self.backgroundColor = .white
         setup()
@@ -41,6 +43,9 @@ class LoginInputView: UIView {
             
         //right textfield
         self.addSubview(rightField)
+        if isSecret {
+            rightField.textContentType = .password
+        }
         rightField.font = UIFont.systemFont(ofSize: 16)
         rightField.attributedPlaceholder = NSAttributedString(string: rightName,
                                                               attributes: [.foregroundColor: UIColor(red: 180/255.0, green: 180/255.0, blue: 180/255.0, alpha: 1.0), .font: UIFont.systemFont(ofSize: 16)])

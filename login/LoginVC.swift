@@ -64,7 +64,7 @@ class LoginVC: UIViewController, UITextViewDelegate {
             make.top.equalToSuperview()
         }
         //pwd view
-        let pwdView = LoginInputView("密码", "请输入密码")
+        let pwdView = LoginInputView("密码", "请输入密码", true)
         inputScopeView.addSubview(pwdView)
         pwdView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
