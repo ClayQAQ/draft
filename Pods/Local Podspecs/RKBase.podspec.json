@@ -1,0 +1,25 @@
+{
+  "name": "RKBase",
+  "version": "1.1.3",
+  "summary": "Rokid RKBase.",
+  "description": "RKBase 一般包含系统扩展 和 整个app 最基础功能",
+  "homepage": "https://gitlab.rokid-inc.com/mobile/ios/RKBase",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "金灵波": "lingbo.jin@rokid.com"
+  },
+  "source": {
+    "git": "git@gitlab.rokid-inc.com:mobile/ios/RKBase.git",
+    "tag": "1.1.3"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "RKBase/Classes/**/*",
+  "resources": "RKBase/Assets/**/*",
+  "swift_version": "5.0"
+}

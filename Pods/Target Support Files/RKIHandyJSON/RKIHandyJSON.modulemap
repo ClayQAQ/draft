@@ -1,0 +1,6 @@
+framework module RKIHandyJSON {
+  umbrella header "RKIHandyJSON-umbrella.h"
+
+  export *
+  module * { export * }
+}

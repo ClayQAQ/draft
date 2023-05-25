@@ -1,0 +1,72 @@
+{
+  "name": "RKMFunNative",
+  "version": "1.0.0",
+  "summary": "RKMFun Native",
+  "homepage": "https://github.com/chzy/VideoToolboxPlus.git",
+  "authors": {
+    "Nikita Lutsenko": "nlutsenko@me.com",
+    "Dan Federman": "federman@squareup.com",
+    "Mike Lewis": "mikelikespie@gmail.com"
+  },
+  "license": "BSD",
+  "source": {
+    "git": "https://github.com/facebook/VideoToolboxPlus.git",
+    "tag": "1.0.0"
+  },
+  "requires_arc": true,
+  "source_files": "Classes/**/*.{h,m,swift}",
+  "public_header_files": "Classes/*.h",
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "12.0"
+  },
+  "ios": {
+    "frameworks": "VideoToolbox"
+  },
+  "static_framework": true,
+  "dependencies": {
+    "Moya": [
+
+    ],
+    "RKIHandyJSON": [
+
+    ],
+    "Kingfisher": [
+
+    ],
+    "SnapKit": [
+
+    ],
+    "Then": [
+
+    ],
+    "IQKeyboardManagerSwift": [
+
+    ],
+    "YYKit": [
+
+    ],
+    "RKILogger": [
+
+    ],
+    "QMUIKit": [
+
+    ],
+    "swiftScan": [
+
+    ],
+    "VideoToolboxPlus": [
+
+    ],
+    "DGElasticPullToRefresh": [
+
+    ],
+    "RKBase": [
+
+    ],
+    "SJVideoPlayer": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

@@ -1,0 +1,6 @@
+framework module U3DBirdge {
+  umbrella header "U3DBirdge-umbrella.h"
+
+  export *
+  module * { export * }
+}
