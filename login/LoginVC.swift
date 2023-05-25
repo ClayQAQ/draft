@@ -8,16 +8,12 @@
 import UIKit
 import SnapKit
 
-class LoginVC: UIViewController {
+class LoginVC: UIViewController, UITextViewDelegate {
     let funcTitle = UILabel()
-    var isPwdSelected = true
-    let selectedColor: UIColor = .black
-    let unselectedColor: UIColor = .lightGray
     let inputScopeView = UIView()
-    let accountFeild = UITextField()
-    let pwdFeild = UITextField()
-    let loginBtn = UIButton()
-    let registerBtn = UIButton()
+    let loginBtn = UIButton(type: .custom)
+    let registerBtn = UIButton(type: .custom)
+    let forgetBtn = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,32 +55,86 @@ class LoginVC: UIViewController {
             make.height.equalTo(110)
         }
         //inner subviews
-        let firstView = LoginInputView("账号", "请输入手机号码")
-        inputScopeView.addSubview(firstView)
-        firstView.snp.makeConstraints { make in
+        //account view
+        let accountView = LoginInputView("账号", "请输入手机号码")
+        inputScopeView.addSubview(accountView)
+        accountView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.height.equalTo(48)
             make.top.equalToSuperview()
         }
-        
-        
-        //sms view
-        
-        
-        
-        //login and register view
-        let bottomView = UIView()
-        bottomView.backgroundColor = .green
-        view.addSubview(bottomView)
-        bottomView.snp.makeConstraints { make in
-            make.left.right.equalTo(inputScopeView)
-            make.centerX.equalTo(view.snp.centerX)
-            make.top.equalTo(inputScopeView.snp.bottom)
-            make.height.equalTo(150)
+        //pwd view
+        let pwdView = LoginInputView("密码", "请输入密码")
+        inputScopeView.addSubview(pwdView)
+        pwdView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.height.equalTo(48)
+            make.top.equalTo(accountView.snp.bottom).offset(6)
         }
         
         
+        //login button
+        view.addSubview(loginBtn)
+        loginBtn.setTitle("登录", for: .normal)
+        loginBtn.backgroundColor = UIColor(red: 60/255.0, green: 129/255.0, blue: 246/255.0, alpha: 1.0)
+        loginBtn.layer.cornerRadius = 4
+        loginBtn.addTarget(self, action: #selector(loginAction), for: .touchUpInside)
+        loginBtn.snp.makeConstraints { make in
+            make.left.right.equalTo(inputScopeView)
+            make.centerX.equalTo(view.snp.centerX)
+            make.top.equalTo(inputScopeView.snp.bottom).offset(36)
+            make.height.equalTo(44)
+            make.width.equalTo(320)
+        }
         
+        
+        //policy view
+        let policyView = UIView()
+        view.addSubview(policyView)
+        policyView.snp.makeConstraints { make in
+            make.top.equalTo(loginBtn.snp.bottom).offset(19)
+            make.height.equalTo(22)
+            make.left.equalTo(view).offset(27)
+            make.width.equalTo(300)
+        }
+        //policy text
+        let policyTextView = UITextView()
+        let attributedString = NSMutableAttributedString(string: "我已阅读并同意 隐私政策")
+        let range = (attributedString.string as NSString).range(of: "隐私政策")
+        attributedString.addAttribute(.link, value: "https://www.baidu.com", range: range)
+        attributedString.addAttribute(.foregroundColor, value: UIColor.blue, range: range)
+
+        policyTextView.font = UIFont.systemFont(ofSize: 13)
+        // 设置 UITextView 的 attributedText
+        policyTextView.attributedText = attributedString
+        policyTextView.isUserInteractionEnabled = true
+        policyTextView.isEditable = false
+
+        // 设置 UITextView 的 delegate，以便在用户点击链接时进行导航
+        policyTextView.delegate = self
+
+        // 添加 UITextView 到视图
+        policyView.addSubview(policyTextView)
+        policyTextView.snp.makeConstraints { make in
+            make.left.top.bottom.equalToSuperview()
+            make.width.equalTo(200)
+        }
+        
+        //forget button
+        view.addSubview(forgetBtn)
+        forgetBtn.setTitle("忘记密码", for: .normal)
+        forgetBtn.layer.cornerRadius = 16;
+        forgetBtn.layer.borderWidth = 1;
+        forgetBtn.layer.borderColor = UIColor(red: 0.911, green: 0.911, blue: 0.911, alpha: 1).cgColor;
+        forgetBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        forgetBtn.setTitleColor(UIColor(red: 59/255.0, green: 59/255.0, blue: 59/255.0, alpha: 1), for: .normal)
+        forgetBtn.addTarget(self, action: #selector(forgetAction), for: .touchUpInside)
+        forgetBtn.snp.makeConstraints { make in
+            make.width.equalTo(97)
+            make.height.equalTo(32)
+            make.centerX.equalToSuperview()
+            make.top.equalTo(policyView.snp.bottom).offset(70)
+        }
         
         
     }
@@ -93,4 +143,18 @@ class LoginVC: UIViewController {
         print("register !!!")
     }
     
+    @objc func loginAction() {
+        print("login !!!")
+    }
+    
+    @objc func forgetAction() {
+        print("forget !!!")
+    }
+    
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        // 这里可以打开一个新的视图来显示隐私政策
+        let webViewController = LoginVC() //mock
+        self.navigationController?.pushViewController(webViewController, animated: true)
+        return false // 返回 false 是因为我们已经处理了链接的点击事件，不希望 UITextView 再进行默认的处理
+    }
 }
