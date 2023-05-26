@@ -1,22 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-login-loginUITests/Pods-login-loginUITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
-${BUILT_PRODUCTS_DIR}/DGElasticPullToRefresh/DGElasticPullToRefresh.framework
-${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework
-${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
-${BUILT_PRODUCTS_DIR}/LookinServer/LookinServer.framework
-${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework
-${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
-${BUILT_PRODUCTS_DIR}/QMUIKit/QMUIKit.framework
-${BUILT_PRODUCTS_DIR}/RKBase/RKBase.framework
-${BUILT_PRODUCTS_DIR}/RKIHandyJSON/RKIHandyJSON.framework
-${BUILT_PRODUCTS_DIR}/RKILogger/RKILogger.framework
-${BUILT_PRODUCTS_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework
-${BUILT_PRODUCTS_DIR}/SJUIKit/SJUIKit.framework
-${BUILT_PRODUCTS_DIR}/SJVideoPlayer/SJVideoPlayer.framework
 ${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
-${BUILT_PRODUCTS_DIR}/Then/Then.framework
-${BUILT_PRODUCTS_DIR}/VideoToolboxPlus/VideoToolboxPlus.framework
-${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework
-${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework
-${BUILT_PRODUCTS_DIR}/swiftScan/swiftScan.framework

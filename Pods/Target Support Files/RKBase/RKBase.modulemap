@@ -1,6 +1,0 @@
-framework module RKBase {
-  umbrella header "RKBase-umbrella.h"
-
-  export *
-  module * { export * }
-}

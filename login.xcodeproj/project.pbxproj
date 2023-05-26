@@ -12,6 +12,10 @@
 		6F4756152A1F31390047CEDB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4756142A1F31390047CEDB /* LoginVC.swift */; };
 		6F4756172A1F80300047CEDB /* LoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4756162A1F80300047CEDB /* LoginInputView.swift */; };
 		6F47561B2A20B0EC0047CEDB /* VerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F47561A2A20B0EC0047CEDB /* VerificationCodeController.swift */; };
+		6F52986A2A210F1B005B84A5 /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5298692A210F1B005B84A5 /* LoginUtils.swift */; };
+		6F52986C2A21101C005B84A5 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52986B2A21101C005B84A5 /* VerificationCodeView.swift */; };
+		6F52986E2A211156005B84A5 /* VerificationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52986D2A211156005B84A5 /* VerificationTextView.swift */; };
+		6F5298702A211977005B84A5 /* LoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52986F2A211977005B84A5 /* LoginButton.swift */; };
 		6FB9C3772A1E2F3E0083FDEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB9C3762A1E2F3E0083FDEC /* AppDelegate.swift */; };
 		6FB9C37E2A1E2F3E0083FDEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FB9C37C2A1E2F3E0083FDEC /* Main.storyboard */; };
 		6FB9C3802A1E2F400083FDEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FB9C37F2A1E2F400083FDEC /* Assets.xcassets */; };
@@ -47,6 +51,10 @@
 		6F4756142A1F31390047CEDB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6F4756162A1F80300047CEDB /* LoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputView.swift; sourceTree = "<group>"; };
 		6F47561A2A20B0EC0047CEDB /* VerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeController.swift; sourceTree = "<group>"; };
+		6F5298692A210F1B005B84A5 /* LoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
+		6F52986B2A21101C005B84A5 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
+		6F52986D2A211156005B84A5 /* VerificationTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTextView.swift; sourceTree = "<group>"; };
+		6F52986F2A211977005B84A5 /* LoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginButton.swift; sourceTree = "<group>"; };
 		6FB9C3732A1E2F3E0083FDEC /* login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FB9C3762A1E2F3E0083FDEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FB9C37D2A1E2F3E0083FDEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -120,8 +128,12 @@
 			children = (
 				6FB9C3762A1E2F3E0083FDEC /* AppDelegate.swift */,
 				6F4756142A1F31390047CEDB /* LoginVC.swift */,
+				6F52986F2A211977005B84A5 /* LoginButton.swift */,
 				6F4756162A1F80300047CEDB /* LoginInputView.swift */,
 				6F47561A2A20B0EC0047CEDB /* VerificationCodeController.swift */,
+				6F52986B2A21101C005B84A5 /* VerificationCodeView.swift */,
+				6F52986D2A211156005B84A5 /* VerificationTextView.swift */,
+				6F5298692A210F1B005B84A5 /* LoginUtils.swift */,
 				6FB9C37C2A1E2F3E0083FDEC /* Main.storyboard */,
 				6FB9C37F2A1E2F400083FDEC /* Assets.xcassets */,
 				6FB9C3812A1E2F400083FDEC /* LaunchScreen.storyboard */,
@@ -409,8 +421,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F52986E2A211156005B84A5 /* VerificationTextView.swift in Sources */,
+				6F5298702A211977005B84A5 /* LoginButton.swift in Sources */,
+				6F52986C2A21101C005B84A5 /* VerificationCodeView.swift in Sources */,
 				6F4756152A1F31390047CEDB /* LoginVC.swift in Sources */,
 				6FB9C3772A1E2F3E0083FDEC /* AppDelegate.swift in Sources */,
+				6F52986A2A210F1B005B84A5 /* LoginUtils.swift in Sources */,
 				6F47561B2A20B0EC0047CEDB /* VerificationCodeController.swift in Sources */,
 				6F4756172A1F80300047CEDB /* LoginInputView.swift in Sources */,
 			);
