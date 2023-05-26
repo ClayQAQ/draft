@@ -14,6 +14,8 @@ class LoginVC: UIViewController, UITextViewDelegate {
     let loginBtn = UIButton(type: .custom)
     let registerBtn = UIButton(type: .custom)
     let forgetBtn = UIButton(type: .custom)
+    let accountView = LoginInputView(left: "账号", right: "请输入手机号码", keyboardType: .numberPad, countLimit: 11, isSecret: false)
+    let pwdView = LoginInputView(left: "密码", right: "请输入密码", keyboardType: .default, countLimit: 20, isSecret: true)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +58,6 @@ class LoginVC: UIViewController, UITextViewDelegate {
         }
         //inner subviews
         //account view
-        let accountView = LoginInputView("账号", "请输入手机号码")
         inputScopeView.addSubview(accountView)
         accountView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
@@ -64,7 +65,6 @@ class LoginVC: UIViewController, UITextViewDelegate {
             make.top.equalToSuperview()
         }
         //pwd view
-        let pwdView = LoginInputView("密码", "请输入密码", true)
         inputScopeView.addSubview(pwdView)
         pwdView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
@@ -149,6 +149,8 @@ class LoginVC: UIViewController, UITextViewDelegate {
     
     @objc func forgetAction() {
         print("forget !!!")
+        let vvc = VerificationCodeController()
+        self.navigationController?.pushViewController(vvc, animated: true)
     }
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
@@ -156,5 +158,18 @@ class LoginVC: UIViewController, UITextViewDelegate {
         let webViewController = LoginVC() //mock
         self.navigationController?.pushViewController(webViewController, animated: true)
         return false // 返回 false 是因为我们已经处理了链接的点击事件，不希望 UITextView 再进行默认的处理
+    }
+    
+    //is chinese phone
+    private func isValidPhoneNumber(phoneNumber: String) -> Bool {
+        let phoneNumberRegex = "^1[0-9]{10}$"
+        let predicate = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
+        return predicate.evaluate(with: phoneNumber)
+    }
+    
+    
+    //touches view
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
 }

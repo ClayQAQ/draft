@@ -8,17 +8,23 @@
 import UIKit
 import SnapKit
 
-class LoginInputView: UIView {
+let defaultCountLimit = 20
+
+class LoginInputView: UIView, UITextFieldDelegate {
     let leftName: String
     let rightName: String
     let leftLabel: UILabel = UILabel()
     let rightField: UITextField = UITextField()
     var isSecret: Bool = false
+    let boardType: UIKeyboardType
+    let countLimit: Int
 
-    init(_ leftName: String, _ rightName: String, _ isSecret: Bool = false) {
+    init(left leftName: String, right rightName: String, keyboardType boardType: UIKeyboardType,countLimit: Int = defaultCountLimit, isSecret: Bool = false) {
         self.leftName = leftName
         self.rightName = rightName
         self.isSecret = isSecret
+        self.boardType = boardType
+        self.countLimit = countLimit
         super.init(frame: .zero)
         self.backgroundColor = .white
         setup()
@@ -44,8 +50,10 @@ class LoginInputView: UIView {
         //right textfield
         self.addSubview(rightField)
         if isSecret {
-            rightField.textContentType = .password
+            rightField.isSecureTextEntry = true
         }
+        rightField.delegate = self
+        rightField.keyboardType = boardType
         rightField.font = UIFont.systemFont(ofSize: 16)
         rightField.attributedPlaceholder = NSAttributedString(string: rightName,
                                                               attributes: [.foregroundColor: UIColor(red: 180/255.0, green: 180/255.0, blue: 180/255.0, alpha: 1.0), .font: UIFont.systemFont(ofSize: 16)])
@@ -68,4 +76,14 @@ class LoginInputView: UIView {
         line.backgroundColor = UIColor(red: 216/255.0, green: 216/255.0, blue: 216/255.0, alpha: 1.0)
     }
     
+    //MARK: - TextField Delegate
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else { return false }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
+        if updatedText.count > countLimit && !string.isEmpty {
+            return false
+        }
+        return true
+    }
 }
