@@ -18,6 +18,8 @@ class LoginInputView: UIView, UITextFieldDelegate {
     var isSecret: Bool = false
     let boardType: UIKeyboardType
     let countLimit: Int
+    var contentCount: Int = 0
+    var fieldChanged: ((_ updatedText: String)->())?
 
     init(left leftName: String, right rightName: String, keyboardType boardType: UIKeyboardType,countLimit: Int = defaultCountLimit, isSecret: Bool = false) {
         self.leftName = leftName
@@ -39,7 +41,7 @@ class LoginInputView: UIView, UITextFieldDelegate {
         self.addSubview(leftLabel)
         leftLabel.text = leftName
         leftLabel.font = UIFont.systemFont(ofSize: 16)
-        leftLabel.textColor = UIColor(red: 19/255.0, green: 19/255.0, blue: 19/255.0, alpha: 1.0)
+        leftLabel.textColor = UIColor(HEX: 0x131313)
         leftLabel.snp.makeConstraints { make in
             make.left.equalToSuperview()
             make.centerY.equalToSuperview()
@@ -56,8 +58,8 @@ class LoginInputView: UIView, UITextFieldDelegate {
         rightField.keyboardType = boardType
         rightField.font = UIFont.systemFont(ofSize: 16)
         rightField.attributedPlaceholder = NSAttributedString(string: rightName,
-                                                              attributes: [.foregroundColor: UIColor(red: 180/255.0, green: 180/255.0, blue: 180/255.0, alpha: 1.0), .font: UIFont.systemFont(ofSize: 16)])
-        rightField.textColor = UIColor(red: 59/255.0, green: 59/255.0, blue: 59/255.0, alpha: 1.0)
+                                                              attributes: [.foregroundColor: UIColor(HEX: 0xB4B4B4), .font: UIFont.systemFont(ofSize: 16)])
+        rightField.textColor = UIColor(HEX: 0x3B3B3B)
         rightField.snp.makeConstraints { make in
             make.left.equalTo(leftLabel.snp.right).offset(48)
             make.centerY.equalToSuperview()
@@ -73,7 +75,7 @@ class LoginInputView: UIView, UITextFieldDelegate {
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview()
         }
-        line.backgroundColor = UIColor(red: 216/255.0, green: 216/255.0, blue: 216/255.0, alpha: 1.0)
+        line.backgroundColor = UIColor(HEX: 0xD8D8D8)
     }
     
     //MARK: - TextField Delegate
@@ -81,8 +83,12 @@ class LoginInputView: UIView, UITextFieldDelegate {
         let currentText = textField.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-        if updatedText.count > countLimit && !string.isEmpty {
+        contentCount = updatedText.count
+        if contentCount > countLimit && !string.isEmpty {
             return false
+        }
+        if let block = fieldChanged {
+            block(updatedText)
         }
         return true
     }

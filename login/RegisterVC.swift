@@ -1,28 +1,27 @@
 //
-//  TestVC.swift
+//  RegisterVC.swift
 //  login
 //
-//  Created by clay-rokid on 2023/5/25.
+//  Created by clay-rokid on 2023/5/27.
 //
 
 import UIKit
 import SnapKit
 
-class LoginVC: LoginBaseVC {
+class RegisterVC: LoginBaseVC {
     let funcTitle = UILabel()
     let inputScopeView = UIView()
-    let loginBtn = LoginButton(title: "登录")
-    let registerBtn = UIButton(type: .custom)
+    let loginBtn = LoginButton(title: "下一步")
     let forgetBtn = UIButton(type: .custom)
-    let accountView = LoginInputView(left: "账号", right: "请输入手机号码", keyboardType: .numberPad, countLimit: 11, isSecret: false)
-    let pwdView = LoginInputView(left: "密码", right: "请输入密码", keyboardType: .default, countLimit: 20, isSecret: true)
+    let accountView = LoginInputView(left: "+86", right: "请输入手机号码", keyboardType: .numberPad, countLimit: 11, isSecret: false)
+    let pwdView = LoginInputView(left: "密码", right: "设置不低于六位字符长度", keyboardType: .default, countLimit: 20, isSecret: true)
     let policyBtn = UIButton(type: .custom)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //function title
-        funcTitle.text = "账号登录"
+        funcTitle.text = "注册账号"
         funcTitle.textColor = .black
         funcTitle.font = UIFont.systemFont(ofSize: 24, weight: .bold)
         view.addSubview(funcTitle)
@@ -33,18 +32,6 @@ class LoginVC: LoginBaseVC {
             make.top.equalTo(view).offset(107)
         }
         
-        //register btn
-        view.addSubview(registerBtn)
-        registerBtn.setTitle("注册账号", for: .normal)
-        registerBtn.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        registerBtn.setTitleColor(UIColor(HEX: 0x1759F5), for: .normal)
-        registerBtn.addTarget(self, action: #selector(registerAction), for: .touchUpInside)
-        registerBtn.snp.makeConstraints { make in
-            make.width.equalTo(70)
-            make.height.equalTo(31)
-            make.right.equalTo(view).offset(-28)
-            make.centerY.equalTo(funcTitle)
-        }
         
         
         //input view
@@ -156,14 +143,11 @@ class LoginVC: LoginBaseVC {
     }
     
     //button action
-    @objc func registerAction() {
-        print("register !!!")
-        let registerVC = RegisterVC()
-        self.navigationController?.pushViewController(registerVC, animated: true)
-    }
     
     @objc func loginAction() {
         print("login !!!")
+        let veriCodeVC = VerificationCodeController(phoneNumber: "+86 18768178888")
+        self.navigationController?.pushViewController(veriCodeVC, animated: true)
     }
     
     @objc func policyCheckAction() {
@@ -185,7 +169,7 @@ class LoginVC: LoginBaseVC {
     }
     
     private func checkInputState() {
-        if self.accountView.contentCount > 0 && self.pwdView.contentCount > 0 && self.policyBtn.isSelected {
+        if self.accountView.contentCount > 0 && self.pwdView.contentCount > 0  && self.policyBtn.isSelected{
             self.loginBtn.backgroundColor = UIColor(HEX: 0x3C81F6)
             self.loginBtn.isEnabled = true
         } else {
@@ -193,6 +177,7 @@ class LoginVC: LoginBaseVC {
             self.loginBtn.isEnabled = false
         }
     }
+    
     
     //is chinese phone
     private func isValidPhoneNumber(phoneNumber: String) -> Bool {

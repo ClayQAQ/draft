@@ -12,6 +12,15 @@
 		6F4756152A1F31390047CEDB /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4756142A1F31390047CEDB /* LoginVC.swift */; };
 		6F4756172A1F80300047CEDB /* LoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4756162A1F80300047CEDB /* LoginInputView.swift */; };
 		6F47561B2A20B0EC0047CEDB /* VerificationCodeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F47561A2A20B0EC0047CEDB /* VerificationCodeController.swift */; };
+		6F4756222A21CB0A0047CEDB /* Lite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F47561D2A21CB0A0047CEDB /* Lite@3x.png */; };
+		6F4756232A21CB0A0047CEDB /* uncheck@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F47561E2A21CB0A0047CEDB /* uncheck@3x.png */; };
+		6F4756242A21CB0A0047CEDB /* show_pwd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F47561F2A21CB0A0047CEDB /* show_pwd@3x.png */; };
+		6F4756252A21CB0A0047CEDB /* check@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4756202A21CB0A0047CEDB /* check@3x.png */; };
+		6F4756262A21CB0A0047CEDB /* hide_pwd@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F4756212A21CB0A0047CEDB /* hide_pwd@3x.png */; };
+		6F4756282A21F0C00047CEDB /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4756272A21F0C00047CEDB /* RegisterVC.swift */; };
+		6F47562A2A21F0DD0047CEDB /* ForgetPwdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F4756292A21F0DD0047CEDB /* ForgetPwdVC.swift */; };
+		6F47562C2A21F16C0047CEDB /* PolicyTextVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F47562B2A21F16C0047CEDB /* PolicyTextVC.swift */; };
+		6F47562E2A21F4EA0047CEDB /* LoginBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F47562D2A21F4EA0047CEDB /* LoginBaseVC.swift */; };
 		6F52986A2A210F1B005B84A5 /* LoginUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5298692A210F1B005B84A5 /* LoginUtils.swift */; };
 		6F52986C2A21101C005B84A5 /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52986B2A21101C005B84A5 /* VerificationCodeView.swift */; };
 		6F52986E2A211156005B84A5 /* VerificationTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F52986D2A211156005B84A5 /* VerificationTextView.swift */; };
@@ -51,6 +60,15 @@
 		6F4756142A1F31390047CEDB /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		6F4756162A1F80300047CEDB /* LoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputView.swift; sourceTree = "<group>"; };
 		6F47561A2A20B0EC0047CEDB /* VerificationCodeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeController.swift; sourceTree = "<group>"; };
+		6F47561D2A21CB0A0047CEDB /* Lite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lite@3x.png"; sourceTree = "<group>"; };
+		6F47561E2A21CB0A0047CEDB /* uncheck@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "uncheck@3x.png"; sourceTree = "<group>"; };
+		6F47561F2A21CB0A0047CEDB /* show_pwd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show_pwd@3x.png"; sourceTree = "<group>"; };
+		6F4756202A21CB0A0047CEDB /* check@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@3x.png"; sourceTree = "<group>"; };
+		6F4756212A21CB0A0047CEDB /* hide_pwd@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hide_pwd@3x.png"; sourceTree = "<group>"; };
+		6F4756272A21F0C00047CEDB /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		6F4756292A21F0DD0047CEDB /* ForgetPwdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPwdVC.swift; sourceTree = "<group>"; };
+		6F47562B2A21F16C0047CEDB /* PolicyTextVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyTextVC.swift; sourceTree = "<group>"; };
+		6F47562D2A21F4EA0047CEDB /* LoginBaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginBaseVC.swift; sourceTree = "<group>"; };
 		6F5298692A210F1B005B84A5 /* LoginUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUtils.swift; sourceTree = "<group>"; };
 		6F52986B2A21101C005B84A5 /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 		6F52986D2A211156005B84A5 /* VerificationTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTextView.swift; sourceTree = "<group>"; };
@@ -101,6 +119,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F47561C2A21CB0A0047CEDB /* login-assets */ = {
+			isa = PBXGroup;
+			children = (
+				6F47561D2A21CB0A0047CEDB /* Lite@3x.png */,
+				6F47561E2A21CB0A0047CEDB /* uncheck@3x.png */,
+				6F47561F2A21CB0A0047CEDB /* show_pwd@3x.png */,
+				6F4756202A21CB0A0047CEDB /* check@3x.png */,
+				6F4756212A21CB0A0047CEDB /* hide_pwd@3x.png */,
+			);
+			path = "login-assets";
+			sourceTree = "<group>";
+		};
 		6FB9C36A2A1E2F3E0083FDEC = {
 			isa = PBXGroup;
 			children = (
@@ -127,13 +157,18 @@
 			isa = PBXGroup;
 			children = (
 				6FB9C3762A1E2F3E0083FDEC /* AppDelegate.swift */,
+				6F47562D2A21F4EA0047CEDB /* LoginBaseVC.swift */,
 				6F4756142A1F31390047CEDB /* LoginVC.swift */,
 				6F52986F2A211977005B84A5 /* LoginButton.swift */,
 				6F4756162A1F80300047CEDB /* LoginInputView.swift */,
+				6F4756272A21F0C00047CEDB /* RegisterVC.swift */,
 				6F47561A2A20B0EC0047CEDB /* VerificationCodeController.swift */,
 				6F52986B2A21101C005B84A5 /* VerificationCodeView.swift */,
 				6F52986D2A211156005B84A5 /* VerificationTextView.swift */,
+				6F4756292A21F0DD0047CEDB /* ForgetPwdVC.swift */,
+				6F47562B2A21F16C0047CEDB /* PolicyTextVC.swift */,
 				6F5298692A210F1B005B84A5 /* LoginUtils.swift */,
+				6F47561C2A21CB0A0047CEDB /* login-assets */,
 				6FB9C37C2A1E2F3E0083FDEC /* Main.storyboard */,
 				6FB9C37F2A1E2F400083FDEC /* Assets.xcassets */,
 				6FB9C3812A1E2F400083FDEC /* LaunchScreen.storyboard */,
@@ -291,9 +326,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F4756252A21CB0A0047CEDB /* check@3x.png in Resources */,
+				6F4756262A21CB0A0047CEDB /* hide_pwd@3x.png in Resources */,
+				6F4756232A21CB0A0047CEDB /* uncheck@3x.png in Resources */,
 				6FB9C3832A1E2F400083FDEC /* LaunchScreen.storyboard in Resources */,
 				6FB9C3802A1E2F400083FDEC /* Assets.xcassets in Resources */,
 				6FB9C37E2A1E2F3E0083FDEC /* Main.storyboard in Resources */,
+				6F4756242A21CB0A0047CEDB /* show_pwd@3x.png in Resources */,
+				6F4756222A21CB0A0047CEDB /* Lite@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,11 +462,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F52986E2A211156005B84A5 /* VerificationTextView.swift in Sources */,
+				6F47562A2A21F0DD0047CEDB /* ForgetPwdVC.swift in Sources */,
+				6F47562C2A21F16C0047CEDB /* PolicyTextVC.swift in Sources */,
 				6F5298702A211977005B84A5 /* LoginButton.swift in Sources */,
 				6F52986C2A21101C005B84A5 /* VerificationCodeView.swift in Sources */,
+				6F47562E2A21F4EA0047CEDB /* LoginBaseVC.swift in Sources */,
 				6F4756152A1F31390047CEDB /* LoginVC.swift in Sources */,
 				6FB9C3772A1E2F3E0083FDEC /* AppDelegate.swift in Sources */,
 				6F52986A2A210F1B005B84A5 /* LoginUtils.swift in Sources */,
+				6F4756282A21F0C00047CEDB /* RegisterVC.swift in Sources */,
 				6F47561B2A20B0EC0047CEDB /* VerificationCodeController.swift in Sources */,
 				6F4756172A1F80300047CEDB /* LoginInputView.swift in Sources */,
 			);
@@ -621,7 +665,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clay.login.login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clay.login.login.rokid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -652,7 +696,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.clay.login.login;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clay.login.login.rokid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
